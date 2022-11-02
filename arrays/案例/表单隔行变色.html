@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+ <html lang="en" dir="itr">
+     <head>
+         <!-- The character econding used in the HTML file -->
+         <meta charset="utf-8">
+         <!-- The viewport is the user's visible area of a web page-->       
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <meta name="author" content="Reagan">
+         <meta name="description" content="My new cool project">
+         <meta name="keywords" content="HTML, CSS, SEO, web, web development">
+         <title>Table</title>
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@700&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+         <style>
+
+body {
+    background-color: #f0f2f4;
+    height: 1200px;
+}
+
+.container {
+    width: min(100% - 60px, 2560px);
+    margin-inline: auto;
+}
+
+a {
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+}
+
+header {
+    height: 90px;
+    background-color: #d8ecff;
+}
+
+header::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.title {
+    float: left;
+}
+
+.title h1 {
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    color: #7a53d4;
+    line-height: 90px;
+    margin-left: 150px;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+}
+
+nav {
+    float: right;
+    margin-right: 200px;
+}
+
+nav ul li {
+    position: relative;
+    display: inline;
+    line-height: 90px;
+}
+
+nav ul li a {
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+nav ul li + li {
+    margin-left: 30px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #00cc00;
+}
+
+nav ul li div {
+    position: relative;
+    bottom: 61px;
+    left: 470px;
+    width: 80px;
+    height: 30px;
+    border-radius: 30%;
+    background-color: #7a53d4;
+}
+
+nav ul li div a {
+    position: absolute;
+    right: 15px;
+    bottom: -30px;
+    color: #f0f2f4;
+}
+
+section {
+    height: 1200px;
+    position: relative;
+    margin-top: 2px;
+    background-color: rgb(122 83 212/ 0.1);
+    
+}
+section div {
+    position:absolute;
+    top: 20px;
+    right:700px; 
+}
+
+section table {
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    top: 75px;
+    right: 500px;
+}
+
+th {
+    height: 40px;
+}
+
+table,th,td {
+    border: 2px solid rgb(0, 0, 0);
+    border-collapse: collapse;  
+}
+
+thead tr th:nth-child(1) {
+    width: 10%;
+}
+
+thead tr th:nth-child(2) {
+    width: 25%;
+}
+
+thead tr th:nth-child(3) {
+    width: 30%;
+}
+
+thead tr th:nth-child(4) {
+    width: 10%;
+}
+
+thead tr th:nth-child(5) {
+    width: 25%;
+}
+
+tbody tr td {
+    text-align: center;
+}
+
+.bg {
+    background-color: pink;
+}
+
+
+         </style>
+     </head>
+     <body>
+        <main>
+            <header>
+                <header>
+                    <div class="title"><h1>Sport Data</h1></div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Basketball</a></li>
+                            <li><a href="#">Soccer</a></li>
+                            <li><a href="#">Badminton</a></li>
+                            <li><a href="#">Tennis</a></li>
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                                <div class="login"><a href="#">Log In</a></div>
+                            </li>
+                        </ul>
+                    </nav> 
+                </header>  
+            </header>
+            <div class="container">
+                <section>
+                    <div><h1>Basic  information  of  athletes</h1></div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Number</th>
+                                <th>Name</th>
+                                <th>date of birth</th>
+                                <th>Height</th>
+                                <th>Team</th>
+                            </tr>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Michael Jordan</td>
+                                <td>1963.02.17</td>
+                                <td>1.98</td>
+                                <td><i class="fa-solid fa-hippo"></i> 
+                                    &nbsp Chicago Bulls</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>LeBron James</td>
+                                <td>1984.12.30</td>
+                                <td>2.06</td>
+                                <td><i class="fa-solid fa-water"></i>&nbspLos Angeles Lakers</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Earvin Johnson</td>
+                                <td>1959.08.14</td>
+                                <td>2.06</td>
+                                <td><i class="fa-solid fa-water"></i>&nbspLos Angeles Lakers</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Bill Russell</td>
+                                <td>1934.02.12</td>
+                                <td>2.08</td>
+                                <td><i class="fa-solid fa-person"></i>
+                                    &nbsp Boston Celtics</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Wilt Chamberlain</td>
+                                <td>1936.08.21</td>
+                                <td>2.16</td>
+                                <td><i class="fa-solid fa-water"></i>&nbspLos Angeles Lakers</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Kareem Abdul-Jabbar</td>
+                                <td>1947.04.16</td>
+                                <td>2.18</td>
+                                <td><i class="fa-solid fa-water"></i>&nbspLos Angeles Lakers</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </section>
+            </div>
+        </main>
+        <script>
+            let trs = document.querySelector('tbody').querySelectorAll('tr');
+
+            for(let i = 0; i < trs.length; i++) {
+                trs[i].addEventListener('mouseover', function() {
+                    this.className = 'bg';
+                });
+
+                trs[i].addEventListener('mouseout', function() {
+                    console.log(11);
+                    this.className = '';
+                })
+            }
+        </script>
+     </body>
+ </html>

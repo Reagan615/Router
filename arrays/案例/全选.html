@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+ <html lang="en" dir="itr">
+     <head>
+         <!-- The character econding used in the HTML file -->
+         <meta charset="utf-8">
+         <!-- The viewport is the user's visible area of a web page-->       
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <meta name="author" content="Reagan">
+         <meta name="description" content="intro DOM">
+         <meta name="keywords" content="HTML, CSS, SEO, web, web development">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+         <title>Log in</title>
+         <style>
+           table {
+            margin: 0 auto;
+            margin-top: 200px;
+           }
+          
+         </style>
+         
+         
+     </head>
+     <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="j_cbAll">
+                    </th>
+                    <th>商品</th>
+                    <th>价钱</th>
+                </tr>
+            </thead>
+            <tbody id="j_tbs">
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>iphne14</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>iphne15</td>
+                    <td>9000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>iphne16</td>
+                    <td>10000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>iphne17</td>
+                    <td>11000</td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <script>
+           let j_cbAll = document.getElementById('j_cbAll');
+           let j_tbs = document.getElementById('j_tbs').getElementsByTagName('input');
+
+           j_cbAll.addEventListener('click', function() {
+            for(let i = 0; i < j_tbs.length; i++) {
+                j_tbs[i].checked = this.checked; 
+            }
+           });
+
+           for(let i = 0; i < j_tbs.length; i++) {
+            j_tbs[i].addEventListener('click', function() {
+                let flag = true;
+                for(let j = 0; j < j_tbs.length; j++) {
+                    if(!j_tbs[j].checked) {
+                        flag = false;
+                        break;
+                    }
+                }
+                j_cbAll.checked = flag;
+            })
+           }
+
+
+
+
+
+        </script>
+     </body>
+ </html>
